@@ -1,0 +1,10 @@
+#words {
+    /*text color*/
+    color: white;
+    /*background color of the line of text*/
+    background-color: #0fa0d5;
+}
+/*background color of project*/
+body {
+   background-color: #262626;
+}

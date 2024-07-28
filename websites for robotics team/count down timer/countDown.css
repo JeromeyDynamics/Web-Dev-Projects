@@ -1,0 +1,82 @@
+#body {
+  text-align: center;
+  background-color: cadetblue;
+}
+#timerNumbers {
+  color:rgb(0, 205, 0);
+  font-size: 60px;
+  z-index: 10;
+}
+#frcTeamNumber {
+  color: rgb(0, 140, 255);
+  margin-top: 2.7pc;
+  font-size:x-small;
+  z-index: 15;
+  position: absolute;
+  transform: translate(1170%, 3270%);
+}
+#shiningPartOfClock {
+  margin-left: auto;
+  margin-right: auto;
+  height: 160px;
+  width: 450px;
+  background: linear-gradient(rgb(91, 91, 91), rgb(56, 56, 56), rgb(14, 14, 14));
+  border-style: solid;
+  border-radius: 5%;
+  border-width: 15px;
+  border-color: black;
+  z-index: 5;
+  /*for shine*/
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0, 0.1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  overflow: hidden;
+}
+#shiningPartOfClock:before {
+  content: '';
+  position: absolute;
+  top: -180%;
+  right: -30%;
+  height: 2000px;
+  width: 100px;
+  background: rgba(255,255,255, 0.3);
+  filter: blur(1px);
+  box-shadow: 0 0 10px rgba(255,255,255, 0.1);
+  transform: rotate(25deg) translateX(-200px);
+}
+
+#shiningPartOfClock:hover {
+  animation: tilt linear 5s infinite;
+}
+
+#shiningPartOfClock:hover:before {
+  animation: shine linear 5s infinite;
+}
+
+@keyframes tilt {
+  0% {
+      transform: translate(-50%, -50%) skewY(5deg);
+  }
+  50% {
+      transform: translate(-50%, -50%) skewY(-5deg);
+  }
+  100% {
+      transform: translate(-50%, -50%) skewY(5deg);
+  }
+}
+
+@keyframes shine {
+  0% {
+      transform: rotate(-50deg) translate(-5pc);
+  }
+  50% {
+      transform: rotate(-50deg) translate(50pc);
+  }
+  100% {
+      transform: rotate(-50deg) translate(105pc);
+  }
+}
